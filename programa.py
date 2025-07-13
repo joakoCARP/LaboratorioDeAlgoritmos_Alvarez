@@ -1,4 +1,4 @@
-import string
+import programa
 
 def entrada():
     while True:
