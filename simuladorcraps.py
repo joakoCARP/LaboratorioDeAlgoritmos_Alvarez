@@ -1,3 +1,4 @@
+#integrantes: Alvarez
 import random
 #importa el modulo random que sirve para randomizar los dados
 def dados():
