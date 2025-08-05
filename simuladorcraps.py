@@ -15,7 +15,7 @@ def craps(): #lo que pasa en esta funcion es lo necesario para que el juego siga
     elif tiroUno in [2, 3, 12]:
         print("perdiste instantaneamente")
     else:
-        punto = tiroUno
+        punto = tiroUno #si no ganas ni perdes en el primer tiro, este numero se convierte en tus puntos que vas a necesitar sacar con otro bucle para ganar, pero si sacas un 7, perdes
         print(f"tenes {punto} puntos, para ganar tenes que sacar tus puntos") 
         while True:
             tiroDos = dados()
