@@ -48,3 +48,17 @@ def numerosEnteros():
 numerosEnteros()
 
             
+def programaDivision():
+    try:
+        num1 = float(input("🔢 Ingresá el primer número: "))
+        num2 = float(input("🔢 Ingresá el segundo número: "))
+        resultado = num1 / num2
+        print(f"El resultado de la division es: {resultado}")
+    except ZeroDivisionError:
+        print("no se puede dividir por cero")
+    except ValueError:
+        print("no pongas letras")
+    finally:
+        print("Fin del programa de cálculo.")
+
+programaDivision()
