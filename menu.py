@@ -68,11 +68,11 @@ programaDivision()
 
 def mostrarMenu():
     print("\nmenu de ejercicios:")
-    print("1: divisionentrenumeros")
-    print("2: verificacionedad")
-    print("3: listadenombres")
-    print("4: programadeenteros")
-    print("5: programadedivision")
+    print("1: division entre numeros")
+    print("2: verificacion edad")
+    print("3: lista de nombres")
+    print("4: programa de enteros")
+    print("5: programa de division")
     print("0: salir")
 
 while True:
