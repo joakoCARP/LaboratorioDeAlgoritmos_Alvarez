@@ -8,3 +8,13 @@ except ZeroDivisionError:
     print("no se puede dividir por cero")
 except ValueError:
     print("ingresa numeros validos")
+
+def.edad():
+    while.True:
+    try:
+        edad=int(input("ingresatuedad"))
+        print("tenes{edad}años")
+        break
+    except.ValueError:
+        print("edadnoidentificadad,intentedenuevo")
+edad()
