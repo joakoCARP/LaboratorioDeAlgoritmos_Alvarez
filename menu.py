@@ -50,10 +50,10 @@ numerosEnteros()
             
 def programaDivision():
     try:
-        num1 = float(input("🔢 Ingresá el primer número: "))
-        num2 = float(input("🔢 Ingresá el segundo número: "))
+        num1 = float(input("ingresa el primer numero"))
+        num2 = float(input("ingresa el segundo numero"))
         resultado = num1 / num2
-        print(f"El resultado de la division es: {resultado}")
+        print(f"el resultado de la division es: {resultado}")
     except ZeroDivisionError:
         print("no se puede dividir por cero")
     except ValueError:
