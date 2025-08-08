@@ -18,3 +18,18 @@ def edad():
     except ValueError:
         print("edad no identificadad, intente de nuevo")
 edad()
+
+nombres = ["Ana", "Pedro", "Sofía"]
+
+def nombreIndice():
+    while True:
+        try:
+            indice = int(input("ingresa un número indice (0 a 2)"))
+            print(f(el nombre en el índice es: {nombres[indice]}")
+            break
+        except ValueError:
+            print("numero invaido. Intenta con un numero entero")
+        except IndexError:
+            print("indice fuera del rango. Proba con 0, 1 o 2.")
+
+nombreIndice()
