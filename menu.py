@@ -9,12 +9,12 @@ except ZeroDivisionError:
 except ValueError:
     print("ingresa numeros validos")
 
-def.edad():
-    while.True:
+def edad():
+    while True:
     try:
-        edad=int(input("ingresatuedad"))
-        print("tenes{edad}años")
+        edad = int(input("ingresa tu edad"))
+        print("tenes {edad} años")
         break
-    except.ValueError:
-        print("edadnoidentificadad,intentedenuevo")
+    except ValueError:
+        print("edad no identificadad, intente de nuevo")
 edad()
