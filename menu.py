@@ -33,3 +33,17 @@ def nombreIndice():
             print("indice fuera del rango. Proba con 0, 1 o 2.")
 
 nombreIndice()
+
+def numerosEnteros():
+    try:
+        num1 = int(input("ingresa el primer numero"))
+        num2 = int(input("ingresa el segundo numero"))
+        resultado = num1 + num2
+        print(f(la suma es: {resultado}")
+    except (ValueError, TypeError):
+        print("error. No se puede ingresar texto o numeros con texto.")
+
+
+numerosEnteros()
+
+            
