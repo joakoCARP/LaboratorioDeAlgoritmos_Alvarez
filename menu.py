@@ -1,3 +1,6 @@
+import random
+import string
+
 def dividir():
     try:
         num1 = float(input("ingresa el primer numero"))
@@ -62,3 +65,31 @@ def programaDivision():
         print("Fin del programa de cálculo.")
 
 programaDivision()
+
+def mostrarMenu():
+    print("\nmenu de ejercicios:")
+    print("1: divisionentrenumeros")
+    print("2: verificacionedad")
+    print("3: listadenombres")
+    print("4: programadeenteros")
+    print("5: programadedivision")
+    print("0: salir")
+
+while True:
+    mostrarMenu()
+    opcion = input("selecciona una opcion")
+    if opcion == "1":
+        dividir()
+    elif opcion == "2":
+        edad()
+    elif opcion == "3":
+        nombreIndice()
+    elif opcion == "4":
+        numerosEnteros()
+    elif opcion == "5":
+        programaDivision()
+    elif opcion == "0":
+        print("Programa terminado.")
+        break
+    else:
+        print("Opcion invalida. Proba de nuevo.")
