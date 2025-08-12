@@ -44,4 +44,11 @@ def reemplazo(frase, vocalNueva):
 def repetir():
     print("ingresa frases, se van a repetir con vocales randoms, para terminar el programa, escribi agusfornite2008")
 
-    
+    while True:
+        frase = input("ingresa una frase")
+        if frase.lower() == "agusfornite2008":
+            print("programa finalizado")
+        
+        for vocal in "aeiou":
+            fraseModificada = reemplazo(frase, vocal)
+            print(f"vocal: {vocal}, {fraseModificada}")
