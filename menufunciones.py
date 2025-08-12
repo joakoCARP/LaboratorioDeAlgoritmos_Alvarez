@@ -1,3 +1,6 @@
+import random
+import string
+
 def imc(peso, altura):
     return peso / (altura ** 2)
 
@@ -52,3 +55,43 @@ def repetir():
         for vocal in "aeiou":
             fraseModificada = reemplazo(frase, vocal)
             print(f"vocal: {vocal}, {fraseModificada}")
+
+def invertirPalabras(frase):
+    palabras = frase.split()
+    palabrasInvertidas = palabras[::-1]
+    fraseInvertida = "".join(palabrasInvertidas)
+    return fraseInvertida
+
+frase = input("ingresa una frase")
+resultado = invertirPalabras(frase)
+print(resultado)
+
+def mostrarMenu():
+    print("\nmenu de ejercicios:")
+    print("1: cuenta bancaria")
+    print("2: indice de masa corporal")
+    print("3: programa que da vocales distintas por frase")
+    print("4: palabra invertida")
+    print("5: lista de nombres")
+    print("0: salir")
+
+while True:
+    mostrarMenu()
+    opcion = input("selecciona una opcion")
+    if opcion == "1":
+        dividir()
+    elif opcion == "2":
+        calculadora()
+    elif opcion == "3":
+        repetir()
+    elif opcion == "4":
+        invertirPalabras()
+    elif opcion == "5":
+        programaDivision()
+    elif opcion == "0":
+        print("Programa terminado.")
+        break
+    else:
+        print("Opcion invalida. Proba de nuevo.")
+
+mostrarMenu()
