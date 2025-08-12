@@ -28,3 +28,20 @@ def calculadora():
     except ValueError:
         print("datos invalidos, ingresa de nuevo")
 
+def reemplazo(frase, vocalNueva):
+    vocales = "aeiouAEIOU"
+    fraseModificada = ""
+    for letra in frase:
+        if letra in vocales:
+            if letra.isupper():
+                fraseModificada += vocalNueva.upper()
+            else:
+                fraseModificada += vocalNueva
+        else:
+            fraseModificada += letra
+            return fraseModificada
+
+def repetir():
+    print("ingresa frases, se van a repetir con vocales randoms, para terminar el programa, escribi agusfornite2008")
+
+    
