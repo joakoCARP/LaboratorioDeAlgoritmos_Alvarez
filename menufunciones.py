@@ -1,6 +1,42 @@
 import random
 import string
 
+def menuBanco():
+    print("\nMenú de la cuenta bancaria:")
+    print("1. Depositar dinero")
+    print("2. Retirar dinero")
+    print("3. Salir")
+
+def banco():
+    saldo = 1000
+    while True:
+        menuBanco()
+        try:
+            opcion = input("elegi una opcion (1 a 3")
+            if opcion == "1":
+                monto = float(input("ingresa un monto para depositar"))
+                if monto <= 0:
+                    print("no podes depositar 0 o menos")
+                else:
+                    saldo += monto
+                    print(f"tu saldo actual es: ${saldo:.2f}")
+            elif opcion == "2":
+                monto = float(input("ingresa un monto para retirar"))
+                if monto <= 0:
+                    print("queres sacar 0 pesos o menos maquinola?")
+                elif monto > saldo:
+                    print("no podes sacar mas de lo que tenes pancho")
+                else:
+                    saldo -= monto
+                    print(f"tu saldo actual es: ${saldo:.2f}")
+            elif opcion == "3":
+                print("gracias por usar el banco, chau")
+                break
+            else:
+                print("elegi una opcion valida")
+        except ValueError:
+            print("hubo un error, intenta de nuevo")
+
 def imc(peso, altura):
     return peso / (altura ** 2)
 
@@ -66,6 +102,49 @@ frase = input("ingresa una frase")
 resultado = invertirPalabras(frase)
 print(resultado)
 
+listaNombres = []
+
+def menuNombres():
+    print("\n menu")
+    print("1. agregar nombre")
+    print("2. mostrar nombre por posicion")
+    print("3. ver nombres")
+    print("4. salir")
+
+while True:
+    menuNombres()
+    opcion = input("elegi una opcion (1 al 4) ")
+    if opcion == "1":
+        nombre = input("ingresa un nombre")
+        listaNombres.append(nombre)
+        print(f"se agregó '{nombre}'")
+    elif opcion == "2":
+        if not listaNombres:
+            print("no hay nombres en la lista, agrega una")
+        continue
+    try:
+        posicion = int(input("ingresa la posicion del nombre"))
+        if 1 <= posicion <= len(listaNombres):
+            print(f"el nombre en la posicion {posicion} es: {listaNombres[1]}")
+        else:
+            print("posicion fuera de rango")
+    except ValueError:
+        print("ingresa un numero entero")
+    if opcion == "3":
+        if listaNombres:
+            print("lista de nombres:")
+            for i, nombre in enumerate(listaNombres, start=1):
+                print(f"{i}. {nombre}")
+        else:
+            print("la lista esta vacia")
+
+    elif opcion == "4":
+        print("chau")
+        break
+
+    else:
+        print("elegi entre 1 y 4")
+
 def mostrarMenu():
     print("\nmenu de ejercicios:")
     print("1: cuenta bancaria")
@@ -87,7 +166,7 @@ while True:
     elif opcion == "4":
         invertirPalabras()
     elif opcion == "5":
-        programaDivision()
+        menuNombres()
     elif opcion == "0":
         print("Programa terminado.")
         break
