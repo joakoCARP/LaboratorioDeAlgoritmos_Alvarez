@@ -17,4 +17,5 @@ def descartar():
         print("pedi cartas amigo")
         return
     print("mano actual:")
-
+    for i in range(len(mano)):
+        print(f"{i + 1}. {mano[i]}")
