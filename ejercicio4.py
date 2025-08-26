@@ -19,3 +19,24 @@ def descartar():
     print("mano actual:")
     for i in range(len(mano)):
         print(f"{i + 1}. {mano[i]}")
+cantidad = int(input("¿Cuántas cartas querés descartar? "))
+        if cantidad > len(mano) or cantidad < 0:
+            print("Cantidad inválida.")
+            return
+        descartadas = []
+        for i in range(cantidad):
+            indice = int(input(f"Ingresá el número de la carta a descartar ({i + 1}/{cantidad}): ")) 
+• 1
+            if 0 <= indice < len(mano):
+                descartadas.append(mano[indice])
+            else:
+                print("Índice inválido. Se salta esta carta.")
+        for carta in descartadas:
+            mano.remove(carta)
+        nuevas = random.sample([c for c in baraja if c not in mano], len(descartadas))
+        mano.extend(nuevas)
+        print("\nTu nueva mano es:")
+        for i in range(len(mano)):
+            print(f"{i + 1}. {mano[i]}")
+    except ValueError:
+        print("Entrada inválida.")
