@@ -19,24 +19,36 @@ def descartar():
     print("mano actual:")
     for i in range(len(mano)):
         print(f"{i + 1}. {mano[i]}")
-cantidad = int(input("¿Cuántas cartas querés descartar? "))
+    try:
+        cantidad = int(input("cuantas cartas vas a descartar"))
         if cantidad > len(mano) or cantidad < 0:
-            print("Cantidad inválida.")
+            print("cantidad invalida")
             return
         descartadas = []
         for i in range(cantidad):
-            indice = int(input(f"Ingresá el número de la carta a descartar ({i + 1}/{cantidad}): ")) 
-• 1
+            indice = int(input(f"pone el numero de la carta a descartar ({i + 1}/{cantidad}): ")) * 1
             if 0 <= indice < len(mano):
                 descartadas.append(mano[indice])
             else:
-                print("Índice inválido. Se salta esta carta.")
+                print("indice invalido, esta carta se descarta")
         for carta in descartadas:
             mano.remove(carta)
-        nuevas = random.sample([c for c in baraja if c not in mano], len(descartadas))
+        nuevas = random.sample([c for c in cartas if c not in mano], len(descartadas))
         mano.extend(nuevas)
-        print("\nTu nueva mano es:")
+        print("\ntu nueva mano es:")
         for i in range(len(mano)):
             print(f"{i + 1}. {mano[i]}")
     except ValueError:
-        print("Entrada inválida.")
+            print("entrada invalida")
+
+while True:
+    opcion = input("bienvenido,presiona 1 para pedir cartas, 2 para descartar y 3 para terminar el programa")
+
+    if opcion == "1":
+        pedircartas()
+    elif opcion == "2":
+        descartar()
+    elif opcion == "3":
+        print("fin del programa")
+        break
+    else: print("opcion invalida")
