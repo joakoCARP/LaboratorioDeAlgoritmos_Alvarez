@@ -32,15 +32,14 @@ def menu_juego ():
         valor = generar_mano_y_valor()
         puntajetotal += valor
         manosdadas += 1
-        elif puntajetotal >= 100:
-            print("ganaste, tu puntaje total es:", puntajetotal)
+    elif puntajetotal >= 100:
+        print("ganaste, tu puntaje total es:", puntajetotal)
             break
-        elif puntajetotal <= 100:
-            print("perdiste, tu puntaje total es:", puntajetotal)
+    elif puntajetotal <= 100:
+        print("perdiste, tu puntaje total es:", puntajetotal)
             break
     elif juego == "2":
         print("cerrando programa")
     else: print("numero incorrecto, elegi de nuevo")
-
 
 menu_juego()
