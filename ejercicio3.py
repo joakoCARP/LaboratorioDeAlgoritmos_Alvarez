@@ -1,18 +1,14 @@
-filas = 4
+matriz = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 15, 20],
+    [25, 30, 35, 40]
+]
 
-columnas = 4
+fila = int(input("ingrese un indice"))
+columna = int(input("ingrese el indice de la columna"))
 
-matriz = []
-
-for i in range(filas):
-    filaactual = []
-for j in range(columnas):
-    valor = int(input(f"Ingresa el elemento[{i}][{j}]: "))
-    filaactual.append(valor)
-
-matriz.append(filaactual)
-
-print("\nLa matriz cargada es:")
-
-for fila in matriz:
-    print(fila)
+if 0 <= fila < 4 and 0 <= columna < 4:
+    print(f"el elemento es {matriz[fila][columna]}")
+else:
+    print("fuera de rango")
