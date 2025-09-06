@@ -4,7 +4,7 @@ matriz = []
 for i in range(10):
     fila = []
     for j in range(10):
-        fila.append("hola esto esta vacio")
+        fila.append("hola aca no hay nada")
     matriz.append(fila)
 
 tesoros = set()
