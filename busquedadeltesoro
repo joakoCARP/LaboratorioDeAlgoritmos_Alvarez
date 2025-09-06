@@ -1,1 +1,40 @@
+import random
 
+matriz = []
+for i in range(10):
+    fila = []
+    for j in range(10):
+        fila.append("hola esto esta vacio")
+    matriz.append(fila)
+
+tesoros = set()
+while len(tesoros) < 5:
+    x = random.randint(0, 9)
+    y = random.randint(0, 9)
+    tesoros.add((x, y))
+
+intentos = 5
+tesorosencontrados = 0
+
+print("bienvenido a la busquera del tesoro lacayo")
+
+while intentos > 0 and tesorosencontrados < 5:
+    print(f"intentos restantes: {intentos}")
+    fila = int(input("elegi una fila del 0 al 9"))
+    columna = int(input("elegi la columna del 0 al 9"))
+
+    if (fila, columna) in tesoros:
+        print("tesoro encontrado")
+        matriz[fila][columna] = "tesoro"
+        tesoros.remove((fila, columna))
+        tesorosencontrados += 1
+        intentos = 5
+    else:
+        print("no hay ningun tesoro en esta casilla")
+        matriz[fila][columna] = "X"
+        intentos -= 1
+
+if tesorosencontrados == 5:
+    print("encontraste todo")
+else:
+    print("te quedaste sin intentos")
