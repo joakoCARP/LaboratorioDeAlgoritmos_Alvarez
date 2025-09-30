@@ -1,4 +1,4 @@
-import random
+import random 
 
 nombres = [
     "juan", "pedro", "luis", "carlos", "sergio", "miguel", "javier", "andres",
